@@ -30,7 +30,7 @@ fun WndProc(hwnd: HWND?, msg: UINT, wParam: WPARAM, lParam: LPARAM) : LRESULT
                 memScoped {
                     ShellExecute?.let {
                         it(hwnd, "open".wcstr.ptr,
-                            "notepad.exe".wcstr.ptr, null, null, SW_SHOWNORMAL)
+                            "C:\\Windows\\System32\\notepad.exe".wcstr.ptr, null, null, SW_SHOWNORMAL)
                     }
                 }
 
@@ -52,7 +52,7 @@ fun WndProc(hwnd: HWND?, msg: UINT, wParam: WPARAM, lParam: LPARAM) : LRESULT
             val hwndButton = CreateWindowExA(
                 HTMAXBUTTON,
                 "BUTTON",  // Predefined class; Unicode assumed
-                "OK",      // Button text
+                "OK pizza",      // Button text
                 (WS_TABSTOP or WS_VISIBLE or WS_CHILD or BS_DEFPUSHBUTTON).toUInt(),  // Styles
                 10,         // x position
                 10,         // y position
